@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    updateCheck="false" monitoring="autodetect" dynamicConfig="true">
+    <diskStore path="java.io.tmpdir" />
+    <cache name="aclCache" maxBytesLocalHeap="40M" eternal="false"
+        timeToIdleSeconds="300" overflowToDisk="true" maxEntriesLocalDisk="1000"
+        diskPersistent="false" diskExpiryThreadIntervalSeconds="120"
+        memoryStoreEvictionPolicy="LRU" />
+
+    <cache name="tokenCache" maxBytesLocalHeap="40M" eternal="false"
+        timeToIdleSeconds="3600" overflowToDisk="true" maxEntriesLocalDisk="1000"
+        diskPersistent="false" diskExpiryThreadIntervalSeconds="120"
+        memoryStoreEvictionPolicy="LRU" />
+</ehcache>
